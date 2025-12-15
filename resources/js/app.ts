@@ -9,6 +9,8 @@ import { initializeTheme } from './composables/useAppearance';
 import PrimeVue from 'primevue/config';
 import Aura from '@primeuix/themes/aura';
 
+import { ZiggyVue } from 'ziggy-js';
+
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
@@ -26,6 +28,7 @@ createInertiaApp({
                     preset: Aura
                 }
             })
+            .use(ZiggyVue)
             .mount(el);
     },
     progress: {

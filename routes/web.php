@@ -12,7 +12,7 @@ Route::get('dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('task', function () {
-    return Inertia::render('Task');
+    return Inertia::render('Task/Index');
 })->middleware(['auth', 'verified'])->name('task');
 
 require __DIR__.'/settings.php';

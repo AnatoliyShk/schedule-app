@@ -8,7 +8,7 @@ import LineChart from '../components/statistic/LineChart.vue';
 import CreateForm from '../components/task/CreateForm.vue';
 
 import Button from 'primevue/button';
-
+import { route } from 'ziggy-js';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -31,7 +31,6 @@ const handleSubmit = () => {
 
 <template>
     <Head title="Dashboard" />
-
     <AppLayout :breadcrumbs="breadcrumbs">
         <div
             class="flex h-full flex-1 flex-col gap-4 overflow-x-auto rounded-xl p-4"
@@ -40,7 +39,8 @@ const handleSubmit = () => {
                 <div
                     class="relative overflow-hidden rounded-xl border border-sidebar-border/70 p-4 dark:border-sidebar-border"
                 >
-                    <h4 class="mb-2 text-sm font-medium">Revenue Trend 1</h4>
+                    <a class="nav-link" :href="route('task')">Home1</a>
+                    <h4 class="mb-2 text-sm font-medium">Revenue Trend 1 route('task')</h4>
                     <LineChart 
                         :labels="['Week 1', 'Week 2', 'Week 3', 'Week 4']"
                         :data="[120, 190, 300, 500]"
