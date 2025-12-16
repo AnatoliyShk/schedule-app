@@ -5,7 +5,6 @@ import { type BreadcrumbItem } from '@/types';
 import { Head } from '@inertiajs/vue3';
 import PlaceholderPattern from '../components/PlaceholderPattern.vue';
 import LineChart from '../components/statistic/LineChart.vue';
-import CreateForm from '../components/task/CreateForm.vue';
 
 import Button from 'primevue/button';
 import { route } from 'ziggy-js';
@@ -54,7 +53,7 @@ const handleSubmit = () => {
                     class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border"
                 >
                 
-                    <CreateForm />
+                    <PlaceholderPattern />
                 </div>
                 <div
                     class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border"
