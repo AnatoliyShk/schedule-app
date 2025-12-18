@@ -137,7 +137,7 @@ logoutForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => 
 logout.form = logoutForm
 
 /**
-* @see routes/web.php:7
+* @see routes/web.php:8
 * @route '/'
 */
 export const home = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -151,7 +151,7 @@ home.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see routes/web.php:7
+* @see routes/web.php:8
 * @route '/'
 */
 home.url = (options?: RouteQueryOptions) => {
@@ -159,7 +159,7 @@ home.url = (options?: RouteQueryOptions) => {
 }
 
 /**
-* @see routes/web.php:7
+* @see routes/web.php:8
 * @route '/'
 */
 home.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -168,7 +168,7 @@ home.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 
 /**
-* @see routes/web.php:7
+* @see routes/web.php:8
 * @route '/'
 */
 home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -177,7 +177,7 @@ home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
 /**
-* @see routes/web.php:7
+* @see routes/web.php:8
 * @route '/'
 */
 const homeForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -186,7 +186,7 @@ const homeForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 })
 
 /**
-* @see routes/web.php:7
+* @see routes/web.php:8
 * @route '/'
 */
 homeForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -195,7 +195,7 @@ homeForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 })
 
 /**
-* @see routes/web.php:7
+* @see routes/web.php:8
 * @route '/'
 */
 homeForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -211,7 +211,7 @@ homeForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 home.form = homeForm
 
 /**
-* @see routes/web.php:11
+* @see routes/web.php:12
 * @route '/dashboard'
 */
 export const dashboard = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -225,7 +225,7 @@ dashboard.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see routes/web.php:11
+* @see routes/web.php:12
 * @route '/dashboard'
 */
 dashboard.url = (options?: RouteQueryOptions) => {
@@ -233,7 +233,7 @@ dashboard.url = (options?: RouteQueryOptions) => {
 }
 
 /**
-* @see routes/web.php:11
+* @see routes/web.php:12
 * @route '/dashboard'
 */
 dashboard.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -242,7 +242,7 @@ dashboard.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 
 /**
-* @see routes/web.php:11
+* @see routes/web.php:12
 * @route '/dashboard'
 */
 dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -251,7 +251,7 @@ dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
 /**
-* @see routes/web.php:11
+* @see routes/web.php:12
 * @route '/dashboard'
 */
 const dashboardForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -260,7 +260,7 @@ const dashboardForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> 
 })
 
 /**
-* @see routes/web.php:11
+* @see routes/web.php:12
 * @route '/dashboard'
 */
 dashboardForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -269,7 +269,7 @@ dashboardForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> =>
 })
 
 /**
-* @see routes/web.php:11
+* @see routes/web.php:12
 * @route '/dashboard'
 */
 dashboardForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -285,8 +285,9 @@ dashboardForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> =
 dashboard.form = dashboardForm
 
 /**
-* @see routes/web.php:15
-* @route '/task'
+* @see \App\Http\Controllers\Admin\TaskController::task
+* @see app/Http/Controllers/Admin/TaskController.php:16
+* @route '/admin/task'
 */
 export const task = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: task.url(options),
@@ -295,20 +296,22 @@ export const task = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 
 task.definition = {
     methods: ["get","head"],
-    url: '/task',
+    url: '/admin/task',
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see routes/web.php:15
-* @route '/task'
+* @see \App\Http\Controllers\Admin\TaskController::task
+* @see app/Http/Controllers/Admin/TaskController.php:16
+* @route '/admin/task'
 */
 task.url = (options?: RouteQueryOptions) => {
     return task.definition.url + queryParams(options)
 }
 
 /**
-* @see routes/web.php:15
-* @route '/task'
+* @see \App\Http\Controllers\Admin\TaskController::task
+* @see app/Http/Controllers/Admin/TaskController.php:16
+* @route '/admin/task'
 */
 task.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: task.url(options),
@@ -316,8 +319,9 @@ task.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 
 /**
-* @see routes/web.php:15
-* @route '/task'
+* @see \App\Http\Controllers\Admin\TaskController::task
+* @see app/Http/Controllers/Admin/TaskController.php:16
+* @route '/admin/task'
 */
 task.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: task.url(options),
@@ -325,8 +329,9 @@ task.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
 /**
-* @see routes/web.php:15
-* @route '/task'
+* @see \App\Http\Controllers\Admin\TaskController::task
+* @see app/Http/Controllers/Admin/TaskController.php:16
+* @route '/admin/task'
 */
 const taskForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: task.url(options),
@@ -334,8 +339,9 @@ const taskForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 })
 
 /**
-* @see routes/web.php:15
-* @route '/task'
+* @see \App\Http\Controllers\Admin\TaskController::task
+* @see app/Http/Controllers/Admin/TaskController.php:16
+* @route '/admin/task'
 */
 taskForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: task.url(options),
@@ -343,8 +349,9 @@ taskForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 })
 
 /**
-* @see routes/web.php:15
-* @route '/task'
+* @see \App\Http\Controllers\Admin\TaskController::task
+* @see app/Http/Controllers/Admin/TaskController.php:16
+* @route '/admin/task'
 */
 taskForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
     action: task.url({
@@ -359,8 +366,9 @@ taskForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 task.form = taskForm
 
 /**
-* @see routes/web.php:19
-* @route '/task'
+* @see \App\Http\Controllers\Admin\TaskController::taskCreate
+* @see app/Http/Controllers/Admin/TaskController.php:35
+* @route '/admin/task'
 */
 export const taskCreate = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: taskCreate.url(options),
@@ -369,20 +377,22 @@ export const taskCreate = (options?: RouteQueryOptions): RouteDefinition<'post'>
 
 taskCreate.definition = {
     methods: ["post"],
-    url: '/task',
+    url: '/admin/task',
 } satisfies RouteDefinition<["post"]>
 
 /**
-* @see routes/web.php:19
-* @route '/task'
+* @see \App\Http\Controllers\Admin\TaskController::taskCreate
+* @see app/Http/Controllers/Admin/TaskController.php:35
+* @route '/admin/task'
 */
 taskCreate.url = (options?: RouteQueryOptions) => {
     return taskCreate.definition.url + queryParams(options)
 }
 
 /**
-* @see routes/web.php:19
-* @route '/task'
+* @see \App\Http\Controllers\Admin\TaskController::taskCreate
+* @see app/Http/Controllers/Admin/TaskController.php:35
+* @route '/admin/task'
 */
 taskCreate.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: taskCreate.url(options),
@@ -390,8 +400,9 @@ taskCreate.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 })
 
 /**
-* @see routes/web.php:19
-* @route '/task'
+* @see \App\Http\Controllers\Admin\TaskController::taskCreate
+* @see app/Http/Controllers/Admin/TaskController.php:35
+* @route '/admin/task'
 */
 const taskCreateForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
     action: taskCreate.url(options),
@@ -399,8 +410,9 @@ const taskCreateForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'
 })
 
 /**
-* @see routes/web.php:19
-* @route '/task'
+* @see \App\Http\Controllers\Admin\TaskController::taskCreate
+* @see app/Http/Controllers/Admin/TaskController.php:35
+* @route '/admin/task'
 */
 taskCreateForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
     action: taskCreate.url(options),
